@@ -1,0 +1,16 @@
+﻿@model List<AllAnaGrupDTO>
+
+<div class="list-group">
+
+    @foreach (var item in Model)
+    {
+        @*<a href="#" class="list-group-item-action active">@item.Name </a>*@
+
+        <a class="dropdown-item " asp-controller="AppUser" asp-action="AllAnaGrup" asp-route-id="@item.ID">@item.AnaGrupAd</a>
+
+    }
+
+
+
+
+</div>

@@ -1,0 +1,25 @@
+﻿@model CreateAnaGrupDTO
+
+
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Kategori Kayıt Paneli</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-action="AnaGrupCreate" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label asp-for="UrunAnagrup">Name</label>
+                <input asp-for="UrunAnagrup" class="form-control" type="text" />
+                <span asp-validation-for="UrunAnagrup" class="text-danger"></span>
+            </div>
+           
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Oluştur</button>
+        </div>
+    </form>
+</div>

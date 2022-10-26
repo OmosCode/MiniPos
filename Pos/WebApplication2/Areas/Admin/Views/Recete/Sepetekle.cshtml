@@ -1,0 +1,70 @@
+﻿
+@model List<Basket>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="callout callout-info">
+                    <h5><i class="fas fa-info"></i> Note:</h5>
+                    This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                </div>
+
+                <div class="invoice p-3 mb-3">
+
+                   
+
+                   
+                   
+                    
+                    @foreach (var item in Model)
+                    {
+
+                    
+
+
+                    <div class="row">
+                        <div class="col-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Ürün </th>
+                                        <th>adet</th>
+                                        <th>Birim Fiyatı</th>
+                                        <th>Toplam Tutar</th>
+
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      
+                                        <td>@item.UrunAdi</td>
+                                        <td>@item.Adet</td>
+                                        <td>@item.Fiyat</td>
+                                        <td>@item.ToplamTutar</td>
+                                       
+                                    </tr>
+                                   
+                                 
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    }
+                    <div class="row">
+
+                       
+                     
+
+
+                    <div class="row no-print">
+                     
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

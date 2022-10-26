@@ -1,0 +1,36 @@
+﻿@model List<UrunListVM>
+
+
+
+@foreach (var item in Model)
+{
+    
+
+
+
+
+
+
+    <div class="card" style="width: 10rem;">
+        <img src="@item.ImagePath" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@item.UrunAdi</h5>
+            <br />
+            <p class="card-navy border-5">@item.UrunFiyat</p>
+            <div>
+                <a asp-controller="Recete" asp-action="Sepetekle" asp-route-id="@item.ID" class="btn btn-primary">Sepete Ekle</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,86 @@
+﻿@model List<Recete>
+<!-- /.card-header -->
+<div class="card-body p-0">
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th style="width: 1%">
+                    #
+                </th>
+                <th style="width: 20%">
+                    Adi
+                </th>
+                <th style="width: 30%">
+                    Fiyatı
+                </th>
+               
+                <th>
+                    Photo
+                </th>
+
+                <th style="width: 20%">
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+
+
+            <tbody>
+                <tr>
+                    <td>
+                        #
+                    </td>
+                    <td>
+                        <a>
+                            @item.UrunAdi
+                        </a>
+                        <br>
+                        <small>
+
+                        </small>
+                    </td>
+                    <td>
+                        <a>
+                            @item.UrunFiyat
+                        </a>
+                        <br>
+                        <small>
+
+                        </small>
+                    </td>
+                  
+                    <td>
+                        <ul class="list-inline ">
+                            <li class="list-inline-item">
+                                <img alt="user" class="table-avatar full-width-chart" src="@item.ImagePath">
+                            </li>
+
+
+                        </ul>
+                    </td>
+
+
+                    <td class="project-actions text-right">
+
+                       
+                        <a class="btn btn-danger btn-sm" asp-action="ReceteDelete" asp-route-id="@item.ID">
+                            <i class="fas fa-trash">
+                            </i>
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+
+
+
+
+
+
+                <tr>
+
+
+            </tbody>
+        }
+    </table>
+</div>

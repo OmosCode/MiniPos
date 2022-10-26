@@ -1,0 +1,64 @@
+﻿@model List<RaporUrunDTO>
+
+
+
+<div class="card-body">
+    <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+        <div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row">
+            <div class="col-sm-12">
+                <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" aria-describedby="example2_info">
+                    <thead>
+                        <tr><th class="sorting sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Urun</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Adet</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Birim Fiyat</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Toplam Tutar</th>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+
+
+
+                            <tr class="odd">
+                                <td class="dtr-control sorting_1" tabindex="0">@item.UrunAdi</td>
+                                <td>@item.Adet</td>
+                                <td>@item.Fiyat</td>
+                                <td>@item.ToplamTutar</td>
+
+
+                            </tr>
+                        }
+
+
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+  
+        <div class="small-box bg-danger col-sm-3">
+            <div class="inner">
+                <h3>@ViewBag.total</h3>
+                <p>Ciro</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+
+        </div>
+        <div class="small-box bg-info col-sm-3 ">
+            <div class="inner">
+                <h3>@ViewBag.adet</h3>
+                <p>Adet Ürün</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-bag"></i>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
